@@ -1,0 +1,45 @@
+const logo = document.querySelector('.logo');
+const logoContainer = document.querySelector('.logo-container');
+const logoLink = document.querySelector('.logo-link');
+
+
+
+window.addEventListener("load", () =>{
+    let logoContainer = document.querySelector('.logo-container');
+    logoContainer.style.width = `${window.innerWidth - 80}px`;
+    // logoContainer.style.width = `${window.innerWidth - 48}px`;
+    logoContainer.style.transform = "scale(1)";
+    window.addEventListener('resize', ()=>{
+        logoContainer.style.width = `${window.innerWidth -80}px`;
+        // logoContainer.style.width = `${window.innerWidth -48}px`;
+    })
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      const containerWidth = logoContainer.offsetWidth;
+      const logoWidth = logo.getBoundingClientRect().width;
+
+      // tutaj musimy dac jesli width jest wiekszy niz np. 1000px to scale 0.05 i top 1.875rem a left 2.5rem
+      // jesli jest mniejszy niz 1000px to scale 0.444 i np. top 0.875rem, a left 1.5rem 
+
+      
+
+      // calculate the target scale
+      // const scale = Math.max(0.444, 1 - scrollPosition / containerWidth);
+      const scale = Math.max(0.05, 1 - scrollPosition / containerWidth);
+      
+      // calculate the target x position
+      const x = Math.max(-logoWidth / 2 + 10, -scrollPosition / containerWidth * logoWidth / 2 + 10);
+      
+      // apply the scale and position
+    //   logo.style.transform = `scale(${scale}) translateX(${x}px)`;
+    //   logo.style.transform = `scale(${scale})`;
+    // logoLink.style.transform = `scale(${scale})`;
+    logoContainer.style.transform = `scale(${scale})`;
+      
+      // modify the link opacity
+    //   logoLink.style.opacity = Math.max(0.2, 1 - scale);
+    });
+
+
+    })

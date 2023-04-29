@@ -1,14 +1,7 @@
-# Alisia-Keys re-creation.
+# Alicia Keys Website Recreation
 
-This is not identical website, what you can see on the official Alisia Keys Website,
-but when I was looking for inspiration on dribbble, I found out someone re-create UI of this web,
-so i try to re-create this web but using code.
+This project is a recreation of the Alicia Keys website UI that I discovered on Dribbble. While it's not an identical replica of the official website, it served as a great source of inspiration for me to experiment with my coding skills.
 
-Logo "Alicia Keys" scaling effect got me sometime to figure out how to make it correctrly, because many times a had problems with this.
-First how to find users width of the screen, then apply this to logo, so logo fitte the width and not overflows. 
-Then when you scrolling down na Logo gets smaller and smaller, and stays at the place, where navigations is.
+One of the most challenging parts of this project was creating the logo "Alicia Keys" scaling effect. It took me some time to figure out how to get it right, especially in terms of making sure it didn't overflow the screen. I had to find the user's screen width and apply that to the logo, so it would fit perfectly. As users scroll down, the logo gradually becomes smaller and remains in place, just to the navigation bar.
 
-
-After this when you scroll down, sections sticks on the top, but not exactly on the top but little bit more that the top of the page like 300px above if i remember :D
-
-I didn't add to many features on this page, but still it's nice looking page, but not finished. 
+In addition to this, I implemented sticky sections that remain at the top of the page, around 300px above the actual top of the page. While there aren't many features on this page, it still looks aesthetically pleasing. Do note, however, that this is an unfinished project.
